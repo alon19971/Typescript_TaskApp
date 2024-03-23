@@ -1,0 +1,59 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>My Notes App</title>
+            <script src="build/classes/note.js" ></script>
+            <script src="build/classes/LeisureNote.js" ></script>
+            <script src="build/classes/taskNote.js" ></script>
+            <script src="build/utils/notifications.js" ></script>
+            <script src="build/interfaces/meetings.js"></script>
+            <script src="build/interfaces/sportsAndLeisure.js"></script>
+            <script src="build/interfaces/tasks.js"></script>
+            <script src="build/app.js" defer></script>
+            <link rel="stylesheet" href="css/styles.css">
+        </head>
+        <body>
+            <header>
+                <h1>Tasks App</h1>
+            </header>
+            <main>
+                <div id="addNoteContainer" class="edit-mode-action" style="display: none;">
+                <h2>Adding new note</h2>
+                    <label for="noteCategory">Category:</label>
+            <select id="noteCategory">
+                <option value="General">General</option>
+                <option value="Tasks">Tasks</option>
+                <option value="Meetings">Meetings</option>
+                <option value="SportsAndLeisure">Sports and Leisure</option>
+
+            </select><br><br>
+                            <label>Title:</label>
+                    <input for type="text" id="noteTitle" placeholder="Title"><br><br>
+                    <textarea id="noteText" placeholder="Description"></textarea><br><br>
+
+                    <div id="locationInputContainer" style="display: none;">
+                        <label for="locationInput">Location:</label>
+                        <input type="text" id="locationInput" placeholder="enter location"><br><br>
+                    </div>
+
+                            <label for="imageURL">Image URL:</label>
+                    <input type="url" id="imageURL" name="imageURL" placeholder="enter image URL"><br><br>
+
+                        <label for="completionDate">Complete By:</label>
+                    <input type="date" id="completionDate" name="completionDate">
+
+                        <label for="completionTime">Time:</label>
+                    <input type="time" id="completionTime" name="completionTime">
+                    <button id="addNoteButton">Add Note</button></div>
+                    
+                    <button id="editModeButton" onclick="toggleEditMode()">Edit Mode</button>
+
+                    <div id="notesContainer"></div>
+                    <div class="image-container">
+                    </div>
+
+            </main>
+        </body>
+        </html>
